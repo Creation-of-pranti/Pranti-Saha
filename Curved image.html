@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>L08 - Curved Images</title>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <!-- Asset Management System -->
+            <a-assets>
+                <img id="Flat image" src="Flat%20image.jpg">
+                <img id="Curved image" src="Curved%20image.jpg">
+                <img id="Curved right" src="Curved%20right.jpg">
+                <img id="Curved center" src="Curved%20center.jpg">
+                <img id="Curved left" src="Curved%20left.jpg">
+            </a-assets>
+            <!-- Image Primitive । IMG size 1024x768px -->
+            <!-- IMG width (px) = 1 m -->
+            <!-- IMG height (m) = width (m)/IMG width (px) * IMG height (px) -->
+            <a-image src="#Flat image"
+                     position="0 1.5 -3"
+                     width="1"
+                     height="0.75"
+                     scale="3 3 1">
+            </a-image>
+            <!-- Curved Image Primitive । SINGLE IMG । IMG size 1024x768 px -->
+            <!-- ? Radius of Arc -->
+            <!-- Width of Arc = 1 m -->
+            <!-- Length of Arc = 1.111 m -->
+            <!-- Angle Subtended by Arc = 90 deg -->
+            <!-- ? IMG height (m) = width (m)/IMG width (px) * IMG height (px) -->
+            <a-curvedimage src="#Curved image"
+                           theta-length="90"
+                           theta-start="135"
+                           radius="0.767"
+                           height="0.833"
+                           position="0 1.5 0"
+                           scale="3 3 3">
+            </a-curvedimage>
+            <!-- Curved Image Primitive । 3-IMG LAYOUT । IMG size 1024x768 px -->
+            <!-- ? Radius of Arc -->
+            <!-- Width of Arc DIAMETER = 1 m -->
+            <!-- Length of Each IMG = ? m -->
+            <!-- Angle Subtended by Arc = 180 deg -->
+            <!-- Angle Subtended by Each IMG = 50 deg -->
+            <!-- ? IMG height (m) = width (m)/IMG width (px) * IMG height (px) -->
+            <!-- RIGHT IMG -->
+            <a-curvedimage src="#Curved right"
+                           theta-length="50"
+                           theta-start="90"
+                           radius="0.5"
+                           height="0.327"
+                           position="0 1.5 0"
+                           scale="3 3 3">
+            </a-curvedimage>
+            <!-- CENTER IMG -->
+            <a-curvedimage src="#Curved center"
+                           theta-length="50"
+                           theta-start="155"
+                           radius="0.5"
+                           height="0.327"
+                           position="0 1.5 0"
+                           scale="3 3 3">
+            </a-curvedimage>
+            <!-- LEFT IMG -->
+            <a-curvedimage src="#Curved left"
+                           theta-length="50"
+                           theta-start="220"
+                           radius="0.5"
+                           height="0.327"
+                           position="0 1.5 0"
+                           scale="3 3 3">
+            </a-curvedimage>
+        </a-scene>
+    </body>
+</html>
