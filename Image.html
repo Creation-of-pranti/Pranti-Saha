@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>L08 - Image textures and materials</title>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+              <!-- Asset Management System -->
+            <a-assets>
+                <img id="code3-NRM" src="Code%20Image%203.jpg">
+                <img id="code3" src="Code%20Image%203.jpg">
+                <img id="code3-NRM" src="Code%20Image%203.jpg">
+            </a-assets>
+            <!-- Light Blue Box -->
+            <a-box color="#12c8e8"
+                   src="Code%20Image%203.jpg"
+                   repeat="2 2"
+                   normal-map="#code1-NRM"
+                   normal-texture-repeat="2 2"
+                   normal-scale="2 -2"
+                   roughness="0.5"
+                   width="4" 
+                   height="4" 
+                   depth="1.9"
+                   position="-2 2 -6"
+                   scale="1 1 1">
+            </a-box>
+            <!-- Brown Box -->
+            <a-box material="color: #d86c6c;
+                             src: #code3;
+                             repeat: 2 2;
+                             normal-map: #code3-NRM;
+                             normal-texture-repeat: 2 2;
+                             normal scale: 1 -1;
+                             roughness: 0.5"
+                   width="4" height="4" depth="1.9"
+                   position="2 2 -6"
+                   scale="1 1 1">
+            </a-box>
+        </a-scene>
+    
+    </body>
+</html>
