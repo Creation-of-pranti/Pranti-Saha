@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>L11 - Sky and images</title>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    </head>
+    <body>
+         <a-scene>
+            <!-- Assest Management System -->
+            <a-assest>
+                <img id="floor" src="Floor%20picture.jpg">
+                <img id="floor-NRM" src="Floor%20picture-NRM.jpg">
+                <img id="clear sunny sky" src="Sky%20image.jpg">
+                <img id="360-panoroma" src="360%20image.jpg">
+            </a-assest>
+             
+            <!-- Sky -->
+            <a-sky src="#clear sunny sky"
+                   rotation="0 0 0">
+            </a-sky>-->
+    
+            <!-- Ground । Realistic style -->
+            <a-plane material="color: #ffffff;
+                               src: #floor;
+                               repeat: 5000 5000;
+                               normal-map: #floor-NRM;
+                               normal-texture-repeat: 5000 5000"
+                     rotation="-90 0 0"
+                     scale="10000 10000 1">
+            </a-plane>
+             
+             <!-- Ground । Cartonish style -->
+            <a-plane material="color: #056312;
+                               shader: flat"
+                     rotation="-90 0 0"
+                     scale="10000 10000 1">
+            </a-plane>-->
+            
+            <!-- 360 Panoroma
+            <a-sky src="#360-panoroma">
+            </a-sky>-->
+        </a-scene>
+    </body>
+</html>
