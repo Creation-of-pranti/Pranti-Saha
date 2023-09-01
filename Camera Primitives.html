@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>L12 - Camera Primitives</title>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <!-- Asset Management System -->
+            <a-assets>
+                <img id="floor" src="Floor%20picture.jpg">
+                <img id="average-height" src="Height%20picture.png">
+            </a-assets>
+            
+            <!-- Ground -->
+            <a-plane src="#floor" shader="flat" rotation="-90 0 0" scale="5 5 1">
+            </a-plane>
+            
+            <!-- Cylinder -->
+            <a-cylinder color="#AA0000" radius="0.5" height="2" position="-2 1 0">
+            </a-cylinder>
+            
+            <!-- Box -->
+            <a-box color="#00AA00" height="2" depth="4" position="2 1 0">
+            </a-box>
+            
+            <!-- Average Height । Human Eye Level -->
+            <a-image src="#average-height" scale="2 2 1" position="0 1 0">
+            </a-image>
+            
+            <!-- Camera -->
+            <!-- Origin at 0 0 0 in VR mode -->
+            <!-- Origin at 0 1.6 0 in Desktop mode -->
+            <!-- Average Height । Adult Eye Level -->
+            <a-camera user-height="1.6">
+            </a-camera>
+        </a-scene>
+    </body>
+</html>
